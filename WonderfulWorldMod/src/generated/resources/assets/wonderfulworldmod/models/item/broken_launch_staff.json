@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "wonderfulworldmod:item/broken_launch_staff"
+  }
+}

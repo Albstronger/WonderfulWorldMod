@@ -1,0 +1,42 @@
+modLoader="javafml" #mandatory
+loaderVersion="[40,)" #mandatory
+license="All rights reserved"
+#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+
+[[mods]] #mandatory
+modId="wonderfulworldmod" #mandatory
+
+version="${file.jarVersion}" #mandatory
+
+displayName="It's a Wonderful World Mod" #mandatory
+
+#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+
+logoFile="wonderfulworldmod.png" #optional
+
+credits="Albstronger, Krylion" #optional
+
+authors="Albstronger, Krylion" #optional
+
+description='''
+This is a long form description of the mod. You can write whatever you want here
+
+Have some lorem ipsum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis lacinia magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed sagittis luctus odio eu tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque volutpat ligula eget lacus auctor sagittis. In hac habitasse platea dictumst. Nunc gravida elit vitae sem vehicula efficitur. Donec mattis ipsum et arcu lobortis, eleifend sagittis sem rutrum. Cras pharetra quam eget posuere fermentum. Sed id tincidunt justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+'''
+
+[[dependencies.wonderfulworldmod]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[40,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+	
+[[dependencies.wonderfulworldmod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,1.19)"
+    ordering="NONE"
+    side="BOTH"

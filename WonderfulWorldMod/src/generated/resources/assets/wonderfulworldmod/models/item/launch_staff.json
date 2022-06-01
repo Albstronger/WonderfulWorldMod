@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "wonderfulworldmod:item/launch_staff"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "wonderfulworldmod:broken": 1.0
+      },
+      "model": "wonderfulworldmod:item/broken_launch_staff"
+    }
+  ]
+}
