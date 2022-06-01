@@ -3,6 +3,7 @@ package org.albstronger.wonderfulworldmod.init;
 import java.util.function.Function;
 
 import org.albstronger.wonderfulworldmod.WonderfulWorld;
+import org.albstronger.wonderfulworldmod.common.block.Icicle;
 import org.albstronger.wonderfulworldmod.common.block.JumpPad;
 
 import com.google.common.base.Supplier;
@@ -20,6 +21,9 @@ public class BlockInit {
 	
 	public static final RegistryObject<Block> JUMP_PAD = register("jump_pad",
 			() -> new JumpPad(), object -> () -> new BlockItem(object.get(), new Item.Properties().tab(WonderfulWorld.WONDERFUL_WORLD_TAB)));
+	
+	public static final RegistryObject<Block> ICICLE = register("icicle",
+			() -> new Icicle(), object -> () -> new BlockItem(object.get(), new Item.Properties().tab(WonderfulWorld.WONDERFUL_WORLD_TAB)));
 	
 	private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<? extends T> block) {
 		return BLOCKS.register(name, block);
