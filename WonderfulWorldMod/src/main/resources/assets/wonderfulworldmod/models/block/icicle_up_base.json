@@ -1,0 +1,6 @@
+{
+  "parent": "wonderfulworldmod:block/icicle",
+  "textures": {
+    "cross": "wonderfulworldmod:block/icicle_up_base"
+  }
+}
