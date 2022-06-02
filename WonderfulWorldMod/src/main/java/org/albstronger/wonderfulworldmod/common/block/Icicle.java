@@ -66,7 +66,7 @@ public class Icicle extends Block implements Fallable, SimpleWaterloggedBlock {
          16.0D, 10.0D);
 
    public Icicle() {
-      super(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_BROWN).noOcclusion()
+      super(BlockBehaviour.Properties.of(Material.ICE, MaterialColor.ICE).noOcclusion()
             .sound(SoundType.POINTED_DRIPSTONE).randomTicks().strength(1.5F, 3.0F).dynamicShape());
       this.registerDefaultState(this.stateDefinition.any().setValue(TIP_DIRECTION, Direction.UP)
             .setValue(THICKNESS, DripstoneThickness.TIP).setValue(WATERLOGGED, Boolean.valueOf(false)));

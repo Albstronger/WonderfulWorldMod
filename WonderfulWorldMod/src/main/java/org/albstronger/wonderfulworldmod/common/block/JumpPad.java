@@ -23,7 +23,7 @@ public class JumpPad extends Block {
 		super(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_GREEN).strength(0.0f)
 				.sound(SoundType.SLIME_BLOCK).jumpFactor(5.0f).dynamicShape().isRedstoneConductor((state, getter, pos) -> {
 					return false;
-				}));
+				}).noOcclusion());
 	}
 	
 	private static VoxelShape makeShape(){

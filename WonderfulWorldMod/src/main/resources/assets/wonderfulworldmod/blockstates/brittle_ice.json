@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"crack=0": {
+			"model": "wonderfulworldmod:block/brittle_ice"
+		},
+		"crack=1": {
+			"model": "wonderfulworldmod:block/brittle_ice_1"
+		},
+		"crack=2": {
+			"model": "wonderfulworldmod:block/brittle_ice_2"
+		}
+	}
+}

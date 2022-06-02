@@ -1,6 +1,7 @@
 {
 	"replace": false,
 	"values": [
-		"wonderfulworldmod:quarry_stopper"
+		"wonderfulworldmod:icicle",
+		"wonderfulworldmod:brittleice"
 	]
 }
