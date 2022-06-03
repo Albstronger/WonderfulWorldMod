@@ -12,6 +12,10 @@ import com.google.common.base.Supplier;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -28,6 +32,9 @@ public class BlockInit {
 	
 	public static final RegistryObject<Block> BRITTLE_ICE = register("brittle_ice",
 			() -> new BrittleIce(), object -> () -> new BlockItem(object.get(), new Item.Properties().tab(WonderfulWorld.WONDERFUL_WORLD_TAB)));
+	
+	public static final RegistryObject<Block> ICE_SLAB = register("ice_slab",
+			() -> new SlabBlock(BlockBehaviour.Properties.of(Material.ICE).friction(0.98F).strength(0.5F).sound(SoundType.GLASS).noOcclusion()), object -> () -> new BlockItem(object.get(), new Item.Properties().tab(WonderfulWorld.WONDERFUL_WORLD_TAB)));
 	
 	private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<? extends T> block) {
 		return BLOCKS.register(name, block);

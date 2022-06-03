@@ -10,21 +10,21 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HalfTransparentBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.level.material.PushReaction;
 
-public class BrittleIce extends Block {
+public class BrittleIce extends HalfTransparentBlock {
 
 	public static final IntegerProperty CRACK = IntegerProperty.create("crack", 0, 2);
 	
 	public BrittleIce() {
-		super(BlockBehaviour.Properties.of(Material.ICE, MaterialColor.ICE).strength(1.5F, 3.0F).sound(SoundType.GLASS).noOcclusion());
+		super(BlockBehaviour.Properties.of(Material.ICE).friction(0.98F).strength(0.5F).sound(SoundType.GLASS).noOcclusion());
 		this.registerDefaultState(this.stateDefinition.any().setValue(CRACK, 0));
 	}
 	
