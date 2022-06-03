@@ -1,8 +1,8 @@
 {
-	"replace": false,
-	"values": [
-		"wonderfulworldmod:icicle",
-		"wonderfulworldmod:brittleice",
-		"wonderfulworldmod:ice",
-	]
+    "replace": false,
+    "values": [
+        "wonderfulworldmod:icicle",
+        "wonderfulworldmod:brittleice",
+        "wonderfulworldmod:packed_ice_slab"
+    ]
 }

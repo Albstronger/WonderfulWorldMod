@@ -24,7 +24,6 @@ public class ClientEventBusSubscriber {
 	public static void clientSetup(FMLClientSetupEvent event) {
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.JUMP_PAD.get(), RenderType.translucent());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.BRITTLE_ICE.get(), RenderType.translucent());
-		ItemBlockRenderTypes.setRenderLayer(BlockInit.ICE_SLAB.get(), RenderType.translucent());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.ICICLE.get(), RenderType.cutout());
 
 		event.enqueueWork(() -> {

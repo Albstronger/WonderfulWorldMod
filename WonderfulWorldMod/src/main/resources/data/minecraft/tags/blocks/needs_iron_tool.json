@@ -1,6 +1,4 @@
 {
-	"replace": false,
-	"values": [
-		"wonderfulworldmod:quarry_stopper"
-	]
+    "replace": false,
+    "values": []
 }
