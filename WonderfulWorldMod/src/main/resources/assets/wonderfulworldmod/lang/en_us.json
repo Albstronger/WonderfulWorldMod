@@ -1,13 +1,4 @@
 {
-<<<<<<< HEAD
-  "block.wonderfulworldmod.jump_pad": "Jump Pad",
-  "block.wonderfulworldmod.icicle": "Icicle",
-  "block.wonderfulworldmod.brittle_ice": "Brittle Ice",
-  "block.wonderfulworldmod.ice_slab": "Ice Slab",
-  "item.wonderfulworldmod.launch_staff": "Launch Staff",
-  "itemGroup.wonderfulworldmod": "It's a Wonderful World Mod"
-}
-=======
     "block.wonderfulworldmod.jump_pad": "Jump Pad",
     "block.wonderfulworldmod.icicle": "Icicle",
     "block.wonderfulworldmod.brittle_ice": "Brittle Ice",
@@ -17,4 +8,3 @@
 
     "itemGroup.wonderfulworldmod": "It's a Wonderful World Mod"
 }
->>>>>>> 6e6f219 (Added Packed Ice slab, structure generation and fixed bugs in brittle)
