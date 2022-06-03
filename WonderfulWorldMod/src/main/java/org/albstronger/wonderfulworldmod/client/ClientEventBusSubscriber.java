@@ -19,19 +19,19 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 public class ClientEventBusSubscriber {
 
 	public static final ResourceLocation BROKEN_PROPERTY = new ResourceLocation(WonderfulWorld.MOD_ID, "broken");
-	
+
 	@SubscribeEvent
 	public static void clientSetup(FMLClientSetupEvent event) {
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.JUMP_PAD.get(), RenderType.translucent());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.BRITTLE_ICE.get(), RenderType.translucent());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.ICE_SLAB.get(), RenderType.translucent());
 		ItemBlockRenderTypes.setRenderLayer(BlockInit.ICICLE.get(), RenderType.cutout());
-		
+
 		event.enqueueWork(() -> {
 			launchStaffOverrides();
 		});
 	}
-	
+
 	private static void launchStaffOverrides() {
 		LaunchStaff staff = ItemInit.LAUNCH_STAFF.get();
 		ItemProperties.register(staff, BROKEN_PROPERTY,

@@ -11,11 +11,12 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ItemInit {
-	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, WonderfulWorld.MOD_ID);
-	
+	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS,
+			WonderfulWorld.MOD_ID);
+
 	public static final RegistryObject<LaunchStaff> LAUNCH_STAFF = register("launch_staff", () -> new LaunchStaff());
-	
-	private static <T extends Item> RegistryObject<T> register(final String name, final Supplier<T> item){
+
+	private static <T extends Item> RegistryObject<T> register(final String name, final Supplier<T> item) {
 		return ITEMS.register(name, item);
 	}
 }

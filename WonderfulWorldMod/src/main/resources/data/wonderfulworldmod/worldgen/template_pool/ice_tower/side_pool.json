@@ -1,0 +1,15 @@
+{
+    "name": "wonderfulworldmod:ice_tower/side_pool",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+            "element": {
+                "location": "wonderfulworldmod:ice_tower_up",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        }
+    ]
+}

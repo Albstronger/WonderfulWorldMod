@@ -20,38 +20,39 @@ public class LaunchStaff extends Item {
 	public LaunchStaff() {
 		super(new Item.Properties().tab(WonderfulWorld.WONDERFUL_WORLD_TAB).durability(175).rarity(Rarity.UNCOMMON));
 	}
-	
+
 	public static boolean isUsable(ItemStack item) {
-		if(item.getItem() instanceof LaunchStaff) {
+		if (item.getItem() instanceof LaunchStaff) {
 			return item.getDamageValue() < item.getMaxDamage() - 1;
 		}
-		
+
 		return false;
 	}
-	
+
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
 		ItemStack itemStack = player.getItemInHand(hand);
-		
-		if(isUsable(itemStack) && player.isOnGround()) {
+
+		if (isUsable(itemStack) && player.isOnGround()) {
 			Vec3 playerPos = player.position();
-			
-			if(level.getBlockState(new BlockPos(playerPos.x, playerPos.y - 1, playerPos.z)) != BlockInit.JUMP_PAD.get().defaultBlockState()) {
+
+			if (level.getBlockState(new BlockPos(playerPos.x, playerPos.y - 1, playerPos.z)) != BlockInit.JUMP_PAD.get()
+					.defaultBlockState()) {
 				player.addEffect(new MobEffectInstance(MobEffects.JUMP, 1, 10, false, false, false));
 			}
 			player.jumpFromGround();
 			player.getCooldowns().addCooldown(this, 20);
-			
+
 			itemStack.hurtAndBreak(1, player, (event) -> {
-                event.broadcastBreakEvent(hand);
-            });
-			
+				event.broadcastBreakEvent(hand);
+			});
+
 			return InteractionResultHolder.pass(itemStack);
 		}
-		
+
 		return InteractionResultHolder.pass(itemStack);
 	}
-	
+
 	@Override
 	public boolean isValidRepairItem(ItemStack thisItem, ItemStack otherItem) {
 		return otherItem.is(Items.SLIME_BALL);

@@ -1,0 +1,15 @@
+{
+    "structures": [
+        {
+            "structure": "wonderfulworldmod:ice_tower",
+            "weight": 1
+        }
+    ],
+
+    "placement": {
+        "salt": 1234462465,
+        "spacing": 30,
+        "separation": 20,
+        "type": "minecraft:random_spread"
+    }
+}
